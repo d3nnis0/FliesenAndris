@@ -11,13 +11,27 @@ jedem Webspace, GitHub Pages, Netlify o. Ä. gehostet werden.
 ## Struktur
 
 ```
-index.html          Startseite (One-Pager: Hero, Über uns, Leistungen,
-                     Ablauf, Galerie, Referenzen, Kontakt)
-impressum.html       Impressum
-datenschutz.html     Datenschutzerklärung
-assets/css/style.css Gesamtes Styling (mobile-first, responsive)
-assets/js/main.js    Menü, Scroll-Effekte, Kontaktformular (mailto)
+index.html            Startseite (One-Pager: Hero, Über uns, Leistungen,
+                       Ablauf, Galerie, Referenzen, Kontakt)
+impressum.html         Impressum
+datenschutz.html       Datenschutzerklärung
+assets/css/style.css   Gesamtes Styling (mobile-first, responsive)
+assets/js/main.js      Menü, Scroll-Effekte, Kontaktformular (mailto)
+assets/img/logo.png    Original-Firmenlogo (Header & Footer)
+assets/img/favicon.png Aus dem Logo-Icon abgeleitetes Favicon
 ```
+
+## Farbpalette
+
+Die Farbpalette wurde direkt aus dem Firmenlogo abgeleitet:
+
+- **Türkis** `#14746c` (Buttons/Links, abgedunkelt für ausreichenden Kontrast
+  auf Weiß) und `#37b6ad` (Original-Logo-Türkis, für dekorative Akzente)
+- **Tiefschwarz** `#17141a` (Logo-Kontur, Fließtext, dunkle Sektionen)
+- **Gold** `#d9a441` ausschließlich für die Bewertungssterne
+
+Alle Farb-Tokens liegen als CSS-Variablen im `:root` von `assets/css/style.css`
+und lassen sich dort zentral anpassen.
 
 ## Inhalte & Platzhalter
 

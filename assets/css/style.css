@@ -3,24 +3,26 @@
    ========================================================================== */
 
 :root {
-  /* Farbpalette – inspiriert von Ton, Naturstein und Fliesenglasur */
-  --color-clay: #b4592f;
-  --color-clay-dark: #8f4322;
-  --color-ink: #262220;
-  --color-ink-soft: #4a433f;
-  --color-cream: #faf6f1;
-  --color-cream-dark: #f0e8de;
-  --color-stone: #e4dcd1;
+  /* Farbpalette – abgeleitet aus dem Firmenlogo (Türkis, Tiefschwarz, Weiß) */
+  --color-teal: #14746c;      /* Logo-Türkis, abgedunkelt für AA-Kontrast auf Weiß */
+  --color-teal-dark: #0d5850; /* Hover-/Aktiv-Zustand */
+  --color-teal-bright: #37b6ad; /* Original-Logo-Türkis für dekorative Akzente */
+  --color-teal-tint: #e7f6f4;   /* helle Fläche für sanfte Akzentflächen */
+  --color-ink: #17141a;       /* Logo-Schwarz (Konturfarbe) */
+  --color-ink-soft: #524f56;
+  --color-cream: #f7fafa;
+  --color-cream-dark: #eaf2f1;
+  --color-stone: #dde7e6;
   --color-white: #ffffff;
-  --color-gold: #b8925a;
+  --color-gold: #d9a441;      /* nur für Bewertungssterne */
 
   --font-head: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --radius-md: 14px;
   --radius-lg: 26px;
-  --shadow-soft: 0 20px 45px -20px rgba(38, 34, 32, 0.35);
-  --shadow-card: 0 10px 30px -12px rgba(38, 34, 32, 0.18);
+  --shadow-soft: 0 20px 45px -20px rgba(23, 20, 26, 0.35);
+  --shadow-card: 0 10px 30px -12px rgba(23, 20, 26, 0.18);
 
   --container: 1180px;
 }
@@ -86,7 +88,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-clay);
+  color: var(--color-teal);
   margin-bottom: 14px;
 }
 
@@ -94,7 +96,7 @@ p {
   content: "";
   width: 24px;
   height: 2px;
-  background: var(--color-clay);
+  background: var(--color-teal);
   display: inline-block;
 }
 
@@ -132,7 +134,7 @@ p {
 }
 
 .section--dark .section-head p {
-  color: #cfc6bd;
+  color: #c7cdcc;
 }
 
 /* Buttons
@@ -157,29 +159,29 @@ p {
 }
 
 .btn--primary {
-  background: var(--color-clay);
+  background: var(--color-teal);
   color: var(--color-white);
-  box-shadow: 0 12px 24px -10px rgba(180, 89, 47, 0.55);
+  box-shadow: 0 12px 24px -10px rgba(20, 116, 108, 0.55);
 }
 
 .btn--primary:hover {
-  background: var(--color-clay-dark);
-  box-shadow: 0 16px 30px -10px rgba(143, 67, 34, 0.6);
+  background: var(--color-teal-dark);
+  box-shadow: 0 16px 30px -10px rgba(13, 88, 80, 0.6);
 }
 
 .btn--ghost {
   background: transparent;
-  border-color: rgba(38, 34, 32, 0.18);
+  border-color: rgba(23, 20, 26, 0.18);
   color: var(--color-ink);
 }
 
 .btn--ghost:hover {
-  border-color: var(--color-clay);
-  color: var(--color-clay);
+  border-color: var(--color-teal);
+  color: var(--color-teal);
 }
 
 .btn--ghost.on-dark {
-  border-color: rgba(250, 246, 241, 0.3);
+  border-color: rgba(247, 250, 250, 0.3);
   color: var(--color-cream);
 }
 
@@ -204,9 +206,9 @@ p {
 }
 
 .site-header.is-scrolled {
-  background: rgba(250, 246, 241, 0.92);
+  background: rgba(247, 250, 250, 0.92);
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px -16px rgba(38, 34, 32, 0.3);
+  box-shadow: 0 8px 24px -16px rgba(23, 20, 26, 0.3);
   padding: 12px 0;
 }
 
@@ -227,29 +229,29 @@ p {
   color: var(--color-ink);
 }
 
-.brand-mark {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--color-clay), var(--color-gold));
-  display: grid;
-  place-items: center;
+.brand-logo {
+  height: 46px;
+  width: auto;
   flex-shrink: 0;
 }
 
-.brand-mark svg {
-  width: 22px;
-  height: 22px;
-}
-
-.brand small {
+.brand-tagline {
   display: block;
   font-family: var(--font-body);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.68rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--color-ink-soft);
+  border-left: 1px solid rgba(23, 20, 26, 0.15);
+  padding-left: 12px;
+  line-height: 1.35;
+  max-width: 108px;
+}
+
+.footer-brand .brand-tagline {
+  color: #c7cdcc;
+  border-left-color: rgba(247, 250, 250, 0.2);
 }
 
 .main-nav {
@@ -268,7 +270,7 @@ p {
 
 .main-nav a:hover,
 .main-nav a.is-active {
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .nav-cta {
@@ -292,7 +294,7 @@ p {
 .header-phone svg {
   width: 18px;
   height: 18px;
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .nav-toggle {
@@ -300,7 +302,7 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  border: 1px solid rgba(38, 34, 32, 0.15);
+  border: 1px solid rgba(23, 20, 26, 0.15);
   background: var(--color-white);
   align-items: center;
   justify-content: center;
@@ -350,8 +352,8 @@ p {
   padding: 168px 0 110px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 85% 10%, rgba(184, 146, 90, 0.22), transparent 45%),
-    linear-gradient(180deg, #fffaf4 0%, var(--color-cream) 60%);
+    radial-gradient(circle at 85% 10%, rgba(55, 182, 173, 0.22), transparent 45%),
+    linear-gradient(180deg, #f4faf9 0%, var(--color-cream) 60%);
 }
 
 .tile-pattern {
@@ -360,8 +362,8 @@ p {
   z-index: 0;
   opacity: 0.5;
   background-image:
-    linear-gradient(rgba(38, 34, 32, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(38, 34, 32, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(23, 20, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 20, 26, 0.05) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: linear-gradient(180deg, black, transparent 85%);
 }
@@ -387,7 +389,7 @@ p {
   align-items: center;
   gap: 8px;
   background: var(--color-white);
-  border: 1px solid rgba(38, 34, 32, 0.08);
+  border: 1px solid rgba(23, 20, 26, 0.08);
   padding: 9px 16px;
   border-radius: 999px;
   font-size: 0.82rem;
@@ -399,7 +401,7 @@ p {
 .hero-badge svg {
   width: 16px;
   height: 16px;
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .hero h1 {
@@ -409,7 +411,7 @@ p {
 
 .hero h1 em {
   font-style: normal;
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .hero-lead {
@@ -456,7 +458,7 @@ p {
   font-family: var(--font-head);
   font-size: 2.1rem;
   font-weight: 700;
-  color: var(--color-clay);
+  color: var(--color-teal);
   line-height: 1;
 }
 
@@ -504,8 +506,8 @@ p {
 /* Trust strip
    ========================================================================== */
 .trust-strip {
-  border-top: 1px solid rgba(38, 34, 32, 0.08);
-  border-bottom: 1px solid rgba(38, 34, 32, 0.08);
+  border-top: 1px solid rgba(23, 20, 26, 0.08);
+  border-bottom: 1px solid rgba(23, 20, 26, 0.08);
   background: var(--color-white);
 }
 
@@ -521,7 +523,7 @@ p {
   font-family: var(--font-head);
   font-size: 1.9rem;
   font-weight: 700;
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .trust-item .lbl {
@@ -567,7 +569,7 @@ p {
 .about-list svg {
   width: 20px;
   height: 20px;
-  color: var(--color-clay);
+  color: var(--color-teal);
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -612,7 +614,7 @@ p {
   padding: 32px 28px;
   box-shadow: var(--shadow-card);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 1px solid rgba(38, 34, 32, 0.06);
+  border: 1px solid rgba(23, 20, 26, 0.06);
 }
 
 .service-card:hover {
@@ -624,7 +626,7 @@ p {
   width: 54px;
   height: 54px;
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(180, 89, 47, 0.15), rgba(184, 146, 90, 0.18));
+  background: linear-gradient(135deg, rgba(20, 116, 108, 0.15), rgba(55, 182, 173, 0.18));
   display: grid;
   place-items: center;
   margin-bottom: 20px;
@@ -633,7 +635,7 @@ p {
 .service-icon svg {
   width: 26px;
   height: 26px;
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .service-card h3 {
@@ -659,8 +661,8 @@ p {
 .process-step {
   position: relative;
   padding: 30px 22px 22px;
-  background: rgba(250, 246, 241, 0.06);
-  border: 1px solid rgba(250, 246, 241, 0.14);
+  background: rgba(247, 250, 250, 0.06);
+  border: 1px solid rgba(247, 250, 250, 0.14);
   border-radius: var(--radius-md);
 }
 
@@ -669,7 +671,7 @@ p {
   content: counter(step, decimal-leading-zero);
   font-family: var(--font-head);
   font-size: 1.6rem;
-  color: var(--color-gold);
+  color: var(--color-teal-bright);
   display: block;
   margin-bottom: 14px;
 }
@@ -680,7 +682,7 @@ p {
 }
 
 .process-step p {
-  color: #cfc6bd;
+  color: #c7cdcc;
   font-size: 0.9rem;
   margin-bottom: 0;
 }
@@ -716,7 +718,7 @@ p {
   color: var(--color-ink-soft);
   font-size: 0.9rem;
   background: var(--color-white);
-  border: 1px dashed rgba(38, 34, 32, 0.2);
+  border: 1px dashed rgba(23, 20, 26, 0.2);
   border-radius: var(--radius-md);
   padding: 16px 20px;
 }
@@ -724,7 +726,7 @@ p {
 .gallery-note svg {
   width: 22px;
   height: 22px;
-  color: var(--color-clay);
+  color: var(--color-teal);
   flex-shrink: 0;
 }
 
@@ -811,7 +813,7 @@ p {
 .contact-info-item .icon svg {
   width: 20px;
   height: 20px;
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .contact-info-item strong {
@@ -827,13 +829,13 @@ p {
 }
 
 .contact-info-item a:hover {
-  color: var(--color-clay);
+  color: var(--color-teal);
 }
 
 .map-embed {
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid rgba(38, 34, 32, 0.1);
+  border: 1px solid rgba(23, 20, 26, 0.1);
   aspect-ratio: 16 / 10;
 }
 
@@ -867,7 +869,7 @@ textarea {
   width: 100%;
   padding: 13px 16px;
   border-radius: 10px;
-  border: 1px solid rgba(38, 34, 32, 0.16);
+  border: 1px solid rgba(23, 20, 26, 0.16);
   background: var(--color-cream);
   font-family: var(--font-body);
   font-size: 0.95rem;
@@ -878,7 +880,7 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  border-color: var(--color-clay);
+  border-color: var(--color-teal);
   background: var(--color-white);
 }
 
@@ -897,7 +899,7 @@ textarea {
 /* CTA band
    ========================================================================== */
 .cta-band {
-  background: linear-gradient(120deg, var(--color-clay), var(--color-clay-dark));
+  background: linear-gradient(120deg, var(--color-teal), var(--color-teal-dark));
   border-radius: var(--radius-lg);
   padding: 56px;
   display: flex;
@@ -943,7 +945,7 @@ textarea {
    ========================================================================== */
 .site-footer {
   background: var(--color-ink);
-  color: #cfc6bd;
+  color: #c7cdcc;
   padding: 72px 0 28px;
 }
 
@@ -952,7 +954,7 @@ textarea {
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 40px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(250, 246, 241, 0.12);
+  border-bottom: 1px solid rgba(247, 250, 250, 0.12);
 }
 
 .footer-brand .brand {
@@ -975,15 +977,15 @@ textarea {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid rgba(250, 246, 241, 0.25);
+  border: 1px solid rgba(247, 250, 250, 0.25);
   display: grid;
   place-items: center;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .footer-social a:hover {
-  background: var(--color-clay);
-  border-color: var(--color-clay);
+  background: var(--color-teal);
+  border-color: var(--color-teal);
 }
 
 .footer-social svg {
@@ -1005,7 +1007,7 @@ textarea {
 
 .footer-col a {
   font-size: 0.92rem;
-  color: #cfc6bd;
+  color: #c7cdcc;
 }
 
 .footer-col a:hover {
@@ -1020,7 +1022,7 @@ textarea {
   flex-wrap: wrap;
   gap: 12px;
   font-size: 0.82rem;
-  color: #9c9289;
+  color: #979c9d;
 }
 
 .footer-bottom a:hover {
@@ -1037,11 +1039,11 @@ textarea {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: var(--color-clay);
+  background: var(--color-teal);
   display: none;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 14px 30px -10px rgba(180, 89, 47, 0.6);
+  box-shadow: 0 14px 30px -10px rgba(20, 116, 108, 0.6);
 }
 
 .mobile-call svg {
@@ -1076,7 +1078,7 @@ textarea {
 }
 
 .legal-page a {
-  color: var(--color-clay);
+  color: var(--color-teal);
   font-weight: 600;
 }
 
